@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/styles/general.css">
+  <link rel="stylesheet" href="assets/styles/config.css">
+  <link rel="stylesheet" href="assets/styles/mobile.css" media="screen and (max-width:950px)">
+  <link rel="stylesheet" href="assets/styles/desktop.css" media="screen and (min-width:950px)">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+</head>
+<body>
+  <main id="card">
+    <div id="card__images">
+      <picture id="images__background">
+        <source media="(min-width:950px)" srcset="assets/images/bg-pattern-desktop.svg">
+        <img src="assets/images/bg-pattern-mobile.svg" alt="Background pattern">
+      </picture>
+      <picture id="images__room">
+        <source media="(min-width:950px)" srcset="assets/images/illustration-woman-online-desktop.svg">
+        <img src="assets/images/illustration-woman-online-mobile.svg" alt="Woman searching in the internet illustration">
+      </picture>
+      <img id="images__cube" src="assets/images/illustration-box-desktop.svg" alt="Box illustration">
+    </div>
+    <div id="card__questions">
+      <h1 id="card__title">FAQ</h1>
+      <div id="faq1" class="faq">
+        <div class="faq__question" onclick="activeDropdown('faq1')">
+          <h2>How many team members can I invite?</h2>
+          <img src="assets/images/icon-arrow-down.svg" alt="Arrow icon">
+        </div>
+        <p class="faq__answer">You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
+      </div>
+      <div id="faq2" class="faq">
+        <div class="faq__question" onclick="activeDropdown('faq2')">
+          <h2>What is the maximum file upload size?</h2>
+          <img src="assets/images/icon-arrow-down.svg" alt="Arrow icon">
+        </div>
+        <p class="faq__answer">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+      </div>
+      <div id="faq3" class="faq">
+        <div class="faq__question" onclick="activeDropdown('faq3')">
+          <h2>How do I reset my password?</h2>
+          <img src="assets/images/icon-arrow-down.svg" alt="Arrow icon">
+        </div>
+        <p class="faq__answer">Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.</p>
+      </div>
+      <div id="faq4" class="faq">
+        <div class="faq__question" onclick="activeDropdown('faq4')">
+          <h2>Can I cancel my subscription?</h2>
+          <img src="assets/images/icon-arrow-down.svg" alt="Arrow icon">
+        </div>
+        <p class="faq__answer">Yes! Send us a message and we’ll process your request no questions asked.</p>
+      </div>
+      <div id="faq5" class="faq">
+        <div class="faq__question" onclick="activeDropdown('faq5')">
+          <h2>Do you provide additional support?</h2>
+          <img src="assets/images/icon-arrow-down.svg" alt="Arrow icon">
+        </div>
+        <p class="faq__answer">Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+      </div>
+    </div>
+  </main>
+  <!-- <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer> -->
+  <script>
+    var activeElement = '';
+
+    function activeDropdown(ID){
+      var element = document.getElementById(ID);
+      if(element.classList.contains('faq--active')){
+        element.classList.remove('faq--active');
+        activeElement = ''
+      }
+      else{
+        unactiveDropdown(activeElement);
+        element.classList.add('faq--active');
+        activeElement = ID;
+      }
+    }
+
+    function unactiveDropdown(ID){
+      if(ID != ''){
+        var element = document.getElementById(ID);
+        if(element.classList.contains('faq--active')){
+          element.classList.remove('faq--active');
+        }
+      }
+    }
+  </script>
+</body>
+</html>

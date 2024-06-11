@@ -1,0 +1,64 @@
+body{
+    background: linear-gradient(0deg, var(--softBlue) 0%, var(--softViolet) 100%);
+    min-height: 445px;
+}
+
+#card{
+    display: flex;
+    border-radius: 25px;
+    background-color: white;
+    min-height: 416px;
+    min-width: 640px;
+}
+
+#card__questions{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+#card__questions h1{
+    margin-bottom: 35px;
+}
+
+.faq{
+    width: 100%;
+    border-bottom: solid 1px var(--LgrayishBlue);
+    margin-bottom: 15px;
+}
+
+.faq__question{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.faq__question h2{
+    font-size: 15px;
+    font-weight: var(--FW1);
+}
+
+.faq__question h2:hover{
+    color: var(--softRed);
+}
+
+.faq__answer{
+    display: none;
+    font-size: var(--FS);
+    margin-bottom: 15px;
+}
+
+.faq--active h2{
+    font-weight: var(--FW2);
+}
+.faq--active img{
+    transform: scaleY(-1);
+}
+.faq--active .faq__answer{
+    display: block;
+}
+
+/*Feel free to remove these styles or customise in your own stylesheet 👍*/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

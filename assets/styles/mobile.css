@@ -1,0 +1,40 @@
+body{
+    padding: 120px 20px 20px 20px;
+    justify-content: start;
+}
+#card{
+    width: 100%;
+    flex-direction: column;
+}
+
+#card__images{
+    width: 100%;
+    position: relative;
+}
+
+#images__background{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#images__room{
+    position: absolute;
+    top: -15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#images__room img{
+    width: 240px;
+    height: auto;
+}
+#images__cube{
+    display: none;
+}
+
+#card__questions{
+    width: 100%;
+    align-items: center;
+    padding: 20px;
+}
