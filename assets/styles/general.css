@@ -7,8 +7,6 @@ body{
     display: flex;
     border-radius: 25px;
     background-color: white;
-    min-height: 416px;
-    min-width: 640px;
 }
 
 #card__questions{

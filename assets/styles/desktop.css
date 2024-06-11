@@ -5,6 +5,8 @@ body{
     width: 60vw;
     height: 60vh;
     flex-direction: row;
+    min-height: 416px;
+    min-width: 640px;
 }
 
 #card__images{

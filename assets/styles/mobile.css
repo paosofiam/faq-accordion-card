@@ -1,6 +1,7 @@
 body{
     padding: 120px 20px 20px 20px;
     justify-content: start;
+    min-height: ;
 }
 #card{
     width: 100%;
